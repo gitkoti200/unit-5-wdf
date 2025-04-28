@@ -175,7 +175,7 @@ REACT_APP_API_URL=https://api.prod.example.com
 - **Assertions**: Validate DOM outcomes.
 
 ```javascript
-test('displays loading state', () =>; {
+test('displays loading state', () => {
   render(<DataFetchingComponent >);
   expect(screen.getByText('Loading...')).toBeInTheDocument();
 });
