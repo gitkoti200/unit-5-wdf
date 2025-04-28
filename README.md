@@ -20,10 +20,10 @@ import { useState, useEffect } from 'react';
 
 function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth);
-  useEffect(() =&gt; {
-    const handleResize = () =&gt; setWidth(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
-    return () =&gt; window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
   return width;
 }
@@ -48,11 +48,11 @@ This Hook tracks window width changes, demonstrating state management and cleanu
 
 ```javascript
 fetch('https://api.example.com/data')
-  .then(response =&gt; {
+  .then(response => {
     if (!response.ok) throw new Error('Network error');
     return response.json();
   })
-  .catch(error =&gt; console.error(error));
+  .catch(error => console.error(error));
 ```
 
 
@@ -63,8 +63,8 @@ fetch('https://api.example.com/data')
 
 ```javascript
 axios.get('https://api.example.com/data')
-  .then(response =&gt; console.log(response.data))
-  .catch(error =&gt; console.error(error));
+  .then(response => console.log(response.data))
+  .catch(error => console.error(error));
 ```
 
 
@@ -88,7 +88,7 @@ Services encapsulate business logic (e.g., API calls) and use React Context for 
 
 ```javascript
 // dataService.js  
-export const fetchData = async (url) =&gt; {
+export const fetchData = async (url) => {
   try {
     const response = await fetch(url);
     return response.json();
@@ -107,7 +107,7 @@ export const fetchData = async (url) =&gt; {
 ```javascript
 const currentLanguage$ = new BehaviorSubject('en-gb');
 currentLanguage$.next('fr'); // Update value  
-currentLanguage$.subscribe(lang =&gt; updateUI(lang)); // React to changes[^8]  
+currentLanguage$.subscribe(lang => updateUI(lang)); // React to changes[^8]  
 ```
 
 
@@ -121,8 +121,8 @@ currentLanguage$.subscribe(lang =&gt; updateUI(lang)); // React to changes[^8]
 - **Example**:
 
 ```javascript
-const UserList = ({ users }) =&gt; (
-  <ul>{users.map(user =&gt; <li>{user.name}</li>)}</ul>
+const UserList = ({ users }) => (
+  <ul>{users.map(user => <li>{user.name}</li>)}</ul>
 );
 ```
 
@@ -135,8 +135,8 @@ const UserList = ({ users }) =&gt; (
 ```javascript
 class UserDashboard extends React.Component {
   state = { users: [] };
-  componentDidMount() { fetchUsers().then(users =&gt; this.setState({ users })); }
-  render() { return &lt;UserList users={this.state.users} /&gt;; }
+  componentDidMount() { fetchUsers().then(users => this.setState({ users })); }
+  render() { return <UserList users={this.state.users} />; }
 }
 ```
 
@@ -175,8 +175,8 @@ REACT_APP_API_URL=https://api.prod.example.com
 - **Assertions**: Validate DOM outcomes.
 
 ```javascript
-test('displays loading state', () =&gt; {
-  render(&lt;DataFetchingComponent /&gt;);
+test('displays loading state', () =>; {
+  render(<DataFetchingComponent >);
   expect(screen.getByText('Loading...')).toBeInTheDocument();
 });
 ```
@@ -189,7 +189,7 @@ test('displays loading state', () =&gt; {
 ### React Native Basics
 
 - **Cross-Platform Apps**: Reuse React skills for mobile development.
-- **Core Components**: `&lt;View&gt;`, `&lt;Text&gt;`, `&lt;Button&gt;`.
+- **Core Components**: `<View>`, `<Text>`, `<Button>`.
 
 
 ### Storybook Integration
