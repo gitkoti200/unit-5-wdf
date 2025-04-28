@@ -1,5 +1,4 @@
 # unit-5-wdf
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
 # Unit V - React Library II: Comprehensive Overview
 
